@@ -19,7 +19,7 @@ exclude = ["/.*"]
 
 [dependencies]
 # Uses portable-atomic polyfill atomics on targets without them
-portable-atomic = { version = "1", optional = true, default-features = false, features = ["unsafe-assume-single-core"] }
+portable-atomic = { version = "1", features = ["critical-section", "require-cas"] }
 
 [dev-dependencies]
 criterion = { version = "0.4.0", default-features = false, features = ["cargo_bench_support"] }
